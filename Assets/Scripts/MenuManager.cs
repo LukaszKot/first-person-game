@@ -107,7 +107,7 @@ public class MenuManager : MonoBehaviour {
             toggle.isOn = false;
             Unmark();
         });
-
+        if (Screen.fullScreen) dropdown.interactable = false;
         toggle.isOn = Screen.fullScreen;
         toggle.onValueChanged.AddListener(SetResolution);
 
